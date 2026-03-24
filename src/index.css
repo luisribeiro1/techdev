@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700;800&family=Source+Sans+3:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0a0a0b;
+  color: #e4e4e7;
+  font-family: 'Source Sans 3', sans-serif;
+}
+
+/* Prose styles for rendered Markdown */
+.prose {
+  color: #d4d4d8;
+  line-height: 1.75;
+}
+
+.prose h1 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #f4f4f5;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+  line-height: 1.2;
+}
+
+.prose h2 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.625rem;
+  font-weight: 600;
+  color: #f4f4f5;
+  margin-bottom: 0.75rem;
+  margin-top: 2.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #27272a;
+}
+
+.prose h3 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #e4e4e7;
+  margin-bottom: 0.5rem;
+  margin-top: 1.75rem;
+}
+
+.prose h4 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #d4d4d8;
+  margin-bottom: 0.5rem;
+  margin-top: 1.25rem;
+}
+
+.prose p {
+  margin-bottom: 1rem;
+}
+
+.prose a {
+  color: #22c55e;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.prose a:hover {
+  color: #4ade80;
+}
+
+.prose ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.prose ol {
+  list-style: decimal;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.prose li {
+  margin-bottom: 0.35rem;
+}
+
+.prose blockquote {
+  border-left: 3px solid #22c55e;
+  padding: 0.75rem 1.25rem;
+  background: #18181b;
+  border-radius: 0 8px 8px 0;
+  margin: 1.25rem 0;
+  color: #a1a1aa;
+  font-style: italic;
+}
+
+.prose blockquote p {
+  margin: 0;
+}
+
+.prose code:not(pre code) {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85em;
+  background: #1e1e22;
+  color: #86efac;
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  border: 1px solid #27272a;
+}
+
+.prose pre {
+  margin: 1.25rem 0;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #27272a;
+}
+
+.prose pre code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.25rem 0;
+  font-size: 0.9rem;
+}
+
+.prose thead {
+  background: #18181b;
+}
+
+.prose th {
+  text-align: left;
+  padding: 0.625rem 0.875rem;
+  color: #e4e4e7;
+  font-weight: 600;
+  border-bottom: 1px solid #27272a;
+  border-right: 1px solid #27272a;
+}
+
+.prose td {
+  padding: 0.5rem 0.875rem;
+  border-bottom: 1px solid #27272a;
+  border-right: 1px solid #27272a;
+  color: #a1a1aa;
+}
+
+.prose tr:last-child td {
+  border-bottom: none;
+}
+
+.prose table {
+  border: 1px solid #27272a;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.prose hr {
+  border: none;
+  border-top: 1px solid #27272a;
+  margin: 2rem 0;
+}
+
+.prose strong {
+  color: #f4f4f5;
+  font-weight: 600;
+}
+
+.prose em {
+  color: #a1a1aa;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111113;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
