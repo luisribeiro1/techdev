@@ -16,6 +16,34 @@ Tudo que você vê no navegador — textos, imagens, botões, formulários — e
 - Criar formulários de cadastro e contato
 - Conectar páginas entre si com links
 
+## Principais características
+
+- **Linguagem de marcação** (não de programação): define estrutura, não lógica.
+- **Baseado em tags:** todo conteúdo é envolvido por elementos como `<p>`, `<h1>`, `<div>`.
+- **Hierárquico:** os elementos formam uma árvore chamada DOM (Document Object Model).
+- **Semântico:** HTML5 introduziu tags com significado (`<header>`, `<main>`, `<article>`, `<footer>`).
+- **Interpretado pelo navegador:** Chrome, Firefox e Edge leem e renderizam o HTML diretamente.
+- **Acessível:** quando bem escrito, é compatível com leitores de tela e tecnologias assistivas.
+
+## Como instalar
+
+HTML **não precisa de instalação**. Todo computador já tem um navegador capaz de renderizar HTML.
+
+**O que você precisa:**
+
+1. **Editor de texto:** recomenda-se o [VS Code](https://code.visualstudio.com/) (gratuito)
+2. **Extensão Live Server** (no VS Code): abre o arquivo no navegador e atualiza automaticamente ao salvar
+3. **Navegador:** Chrome, Firefox ou Edge
+
+**Primeiros passos:**
+
+```bash
+# 1. Instale o VS Code
+# 2. Instale a extensão "Live Server" (por Ritwick Dey)
+# 3. Crie um arquivo index.html
+# 4. Clique com botão direito → "Open with Live Server"
+```
+
 ## Conceitos Fundamentais
 
 ### Tags (Etiquetas)

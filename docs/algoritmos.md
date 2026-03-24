@@ -23,6 +23,29 @@ Com algoritmos você aprende a:
 - Criar soluções que funcionam para diversos casos
 - Pensar de forma organizada e sequencial
 
+## Principais características
+
+- **Sequência:** As instruções são executadas uma após a outra, em ordem.
+- **Decisão:** O algoritmo pode tomar caminhos diferentes dependendo de uma condição (se/senão).
+- **Repetição:** Um bloco de instruções pode ser executado várias vezes (laços/loops).
+- **Abstração:** Simplificar um problema ignorando detalhes desnecessários.
+- **Decomposição:** Dividir um problema grande em partes menores e mais fáceis de resolver.
+- **Padrões:** Identificar semelhanças entre problemas para reutilizar soluções.
+
+## Ferramentas para praticar
+
+Algoritmos podem ser escritos em **pseudocódigo** (linguagem informal) ou representados em **fluxogramas** (diagramas visuais) — nenhuma instalação necessária para começar.
+
+**Para praticar com código real:**
+
+- [VisuAlg](https://visualg3.com.br/) — ambiente em português para aprender algoritmos (gratuito)
+- [Scratch](https://scratch.mit.edu/) — plataforma visual, ótima para iniciantes
+- Qualquer editor de texto + navegador para JavaScript
+
+**Para fluxogramas:**
+
+- [draw.io](https://draw.io) — gratuito, roda no navegador, sem instalação
+
 ## Conceitos Fundamentais
 
 ### Variáveis

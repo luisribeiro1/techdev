@@ -14,6 +14,43 @@ CSS significa **Cascading Style Sheets** (Folhas de Estilo em Cascata). É a lin
 - Adicionar animações e transições
 - Personalizar a aparência de formulários e botões
 
+## Principais características
+
+- **Cascata:** estilos são aplicados em cascata — o que vem depois pode sobrescrever o que veio antes.
+- **Herança:** elementos filhos herdam propriedades dos pais (como cor e fonte).
+- **Especificidade:** quando há conflito de regras, o seletor mais específico vence.
+- **Box Model:** todo elemento é uma caixa com `margin`, `border`, `padding` e `content`.
+- **Flexbox e Grid:** sistemas modernos de layout para posicionar elementos com facilidade.
+- **Media Queries:** permitem aplicar estilos diferentes conforme o tamanho da tela (responsividade).
+- **Variáveis CSS (Custom Properties):** reutilização de valores como cores e tamanhos.
+- **Animações e transições:** efeitos visuais sem precisar de JavaScript.
+
+## Como instalar
+
+CSS **não precisa de instalação**. Basta criar um arquivo `.css` e vinculá-lo ao HTML.
+
+**O que você precisa:**
+
+1. **VS Code** — editor recomendado ([code.visualstudio.com](https://code.visualstudio.com/))
+2. **Extensão Live Server** — para ver as mudanças em tempo real
+3. Um arquivo `.html` e um arquivo `.css` na mesma pasta
+
+**Estrutura mínima:**
+
+```
+projeto/
+├── index.html
+└── style.css
+```
+
+**Vincular o CSS ao HTML:**
+
+```html
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+```
+
 ## Conceitos Fundamentais
 
 ### Como Aplicar CSS

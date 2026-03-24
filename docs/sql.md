@@ -16,6 +16,44 @@ Bancos como MySQL, PostgreSQL, SQL Server e SQLite usam SQL.
 - Relacionar dados entre tabelas diferentes
 - Gerar relatórios e análises
 
+## Principais características
+
+- **Linguagem declarativa:** você diz *o que* quer, não *como* buscar — o banco cuida do resto.
+- **Baseada em conjuntos:** opera sobre grupos de registros de uma vez, não um por um.
+- **ACID:** garante que transações sejam Atômicas, Consistentes, Isoladas e Duráveis.
+- **Integridade referencial:** chaves estrangeiras garantem que os dados se relacionem corretamente.
+- **Padrão universal:** a sintaxe básica funciona em MySQL, PostgreSQL, SQL Server e SQLite.
+- **DDL e DML:** separa comandos de definição de estrutura (`CREATE`, `ALTER`) dos de manipulação de dados (`INSERT`, `UPDATE`, `DELETE`, `SELECT`).
+
+## Como instalar
+
+Escolha um banco de dados para praticar:
+
+**SQLite (mais simples — arquivo único, sem servidor):**
+
+- Instale o [DB Browser for SQLite](https://sqlitebrowser.org/) — interface gráfica gratuita
+- Ou use a extensão **SQLite Viewer** no VS Code
+
+**MySQL (o mais usado em aplicações web):**
+
+```bash
+# Windows: baixe o instalador em mysql.com/downloads
+# macOS:
+brew install mysql
+
+# Verificar instalação:
+mysql --version
+```
+
+**PostgreSQL (robusto, muito usado em produção):**
+
+```bash
+# Windows/macOS: baixe em postgresql.org
+# Ferramenta gráfica recomendada: DBeaver (gratuito)
+```
+
+**Para iniciantes, recomendamos SQLite + DB Browser** — zero configuração, basta abrir e começar.
+
 ## Conceitos Fundamentais
 
 ### O que é um Banco de Dados Relacional?

@@ -16,6 +16,39 @@ Em vez de manipular o HTML diretamente (DOM), o React cria um DOM Virtual e atua
 - Reutilizar componentes em diferentes partes do projeto
 - Criar apps mobile com React Native
 
+## Principais características
+
+- **Componentização:** a interface é dividida em componentes reutilizáveis e independentes.
+- **Virtual DOM:** o React mantém uma cópia virtual do DOM e atualiza apenas o que mudou, tornando a interface mais rápida.
+- **JSX:** sintaxe que mistura JavaScript com HTML, tornando o código mais legível.
+- **Fluxo unidirecional de dados:** os dados fluem do componente pai para o filho (props).
+- **Hooks:** funções como `useState` e `useEffect` adicionam estado e ciclo de vida a componentes funcionais.
+- **Ecossistema rico:** React Router (navegação), Context API (estado global), Next.js (SSR).
+- **Mantido pela Meta:** ampla comunidade, documentação excelente e mercado de trabalho aquecido.
+
+## Como instalar
+
+**Pré-requisito:** Node.js instalado ([nodejs.org](https://nodejs.org))
+
+**Criar projeto com Vite (recomendado):**
+
+```bash
+npm create vite@latest meu-app -- --template react
+cd meu-app
+npm install
+npm run dev
+```
+
+**Criar projeto com Create React App (alternativa):**
+
+```bash
+npx create-react-app meu-app
+cd meu-app
+npm start
+```
+
+Após o `npm run dev`, abra `http://localhost:5173` no navegador.
+
 ## Conceitos Fundamentais
 
 ### Criando um Projeto

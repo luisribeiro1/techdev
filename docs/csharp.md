@@ -14,6 +14,42 @@ C# é uma **linguagem de programação orientada a objetos** criada pela Microso
 - APIs e microsserviços
 - Aplicações mobile multiplataforma
 
+## Principais características
+
+- **Orientada a objetos:** tudo é organizado em classes e objetos.
+- **Tipagem estática e forte:** o tipo de cada variável é definido em tempo de compilação e respeitado rigorosamente.
+- **Compilada para IL:** o código C# é compilado para Intermediate Language e executado pelo runtime .NET (JIT).
+- **Garbage Collection:** o gerenciamento de memória é automático — sem precisar liberar memória manualmente.
+- **LINQ:** permite consultar coleções de dados com sintaxe similar ao SQL diretamente no código.
+- **Async/Await nativo:** suporte de primeira classe para programação assíncrona.
+- **Multiplataforma:** com .NET Core/.NET 5+, roda no Windows, macOS e Linux.
+- **Ecossistema Microsoft:** integração nativa com Azure, Visual Studio e ASP.NET.
+
+## Como instalar
+
+**1. Instale o .NET SDK:**
+
+Acesse [dotnet.microsoft.com](https://dotnet.microsoft.com/download) e baixe a versão mais recente do .NET SDK (LTS recomendado).
+
+**Verificar instalação:**
+
+```bash
+dotnet --version   # ex: 8.0.100
+```
+
+**2. Instale o editor:**
+
+- **Visual Studio Code** ([code.visualstudio.com](https://code.visualstudio.com/)) + extensão **C# Dev Kit**
+- **Visual Studio Community** ([visualstudio.microsoft.com](https://visualstudio.microsoft.com/)) — IDE completa, gratuita
+
+**3. Criar e rodar um projeto:**
+
+```bash
+dotnet new console -n MeuProjeto
+cd MeuProjeto
+dotnet run
+```
+
 ## Conceitos Fundamentais
 
 ### Primeiro Programa

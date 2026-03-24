@@ -16,6 +16,43 @@ Com Node.js, você pode criar servidores web, APIs, ferramentas de linha de coma
 - Microsserviços
 - Backend de aplicações web e mobile
 
+## Principais características
+
+- **Event Loop:** arquitetura não-bloqueante que permite lidar com milhares de conexões simultâneas sem travar.
+- **Single-threaded:** usa uma única thread principal, mas delega operações pesadas ao sistema operacional.
+- **Assíncrono por natureza:** I/O (arquivos, banco, rede) não bloqueia a execução — usa callbacks, Promises e async/await.
+- **Motor V8:** usa o mesmo motor JavaScript do Google Chrome, garantindo alta performance.
+- **npm:** gerenciador de pacotes com mais de 2 milhões de bibliotecas disponíveis.
+- **Full-stack JavaScript:** o mesmo desenvolvedor e a mesma linguagem no frontend e no backend.
+- **Ideal para APIs e tempo real:** muito usado para APIs REST, WebSockets e microserviços.
+
+## Como instalar
+
+**1. Baixe e instale o Node.js:**
+
+Acesse [nodejs.org](https://nodejs.org) e instale a versão **LTS** (Long Term Support) — mais estável para iniciantes.
+
+**Verificar instalação:**
+
+```bash
+node --version   # ex: v20.11.0
+npm --version    # ex: 10.2.4
+```
+
+**2. Instale o VS Code:**
+
+[code.visualstudio.com](https://code.visualstudio.com/) — editor recomendado com suporte nativo a JavaScript/Node.js.
+
+**3. Criar e rodar um arquivo:**
+
+```bash
+# Crie app.js com seu código
+node app.js
+
+# Criar projeto com package.json:
+npm init -y
+```
+
 ## Conceitos Fundamentais
 
 ### Instalação e Primeiro Programa

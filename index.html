@@ -2,11 +2,21 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/techdev/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>tech.dev — Documentação para Iniciantes</title>
-    <script type="module" crossorigin src="/assets/index-ByMJGSCg.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-BuENc1mf.css">
+    <script>
+      // Redirect from 404.html for GitHub Pages SPA routing
+      (function () {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="/techdev/assets/index-D6539pAJ.js"></script>
+    <link rel="stylesheet" crossorigin href="/techdev/assets/index-BmzGLCUk.css">
   </head>
   <body>
     <div id="root"></div>

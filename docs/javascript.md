@@ -16,6 +16,41 @@ Hoje, JavaScript vai muito além do navegador — com Node.js roda no servidor, 
 - Fazer requisições a APIs (carregar dados sem recarregar)
 - Criar aplicações completas (frontend e backend)
 
+## Principais características
+
+- **Linguagem interpretada:** o código é executado diretamente, sem compilação prévia.
+- **Tipagem dinâmica e fraca:** variáveis não têm tipo fixo e há conversões automáticas de tipo.
+- **Multi-paradigma:** suporta programação procedural, orientada a objetos e funcional.
+- **Orientada a eventos:** responde a ações do usuário (cliques, digitação, scroll).
+- **Assíncrona:** com Promises e `async/await`, executa operações sem travar a página.
+- **Roda no navegador e no servidor:** com Node.js, o mesmo código pode ser usado nos dois ambientes.
+- **Ecossistema enorme:** npm possui mais de 2 milhões de pacotes disponíveis.
+
+## Como instalar
+
+**No navegador (sem instalação):**
+
+Todo navegador moderno já tem um console JavaScript. Pressione `F12` → aba **Console** e comece a digitar código.
+
+**Para projetos completos:**
+
+1. Instale o **Node.js** em [nodejs.org](https://nodejs.org) (versão LTS recomendada)
+2. Instale o **VS Code** em [code.visualstudio.com](https://code.visualstudio.com/)
+
+**Verificar instalação:**
+
+```bash
+node --version   # ex: v20.11.0
+npm --version    # ex: 10.2.4
+```
+
+**Criar e rodar um arquivo:**
+
+```bash
+# Crie um arquivo app.js e execute com:
+node app.js
+```
+
 ## Conceitos Fundamentais
 
 ### Variáveis

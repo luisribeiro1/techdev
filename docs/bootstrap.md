@@ -15,6 +15,43 @@ Em vez de escrever todo o CSS do zero, você usa **classes utilitárias** do Boo
 - Manter consistência visual no projeto
 - Prototipar layouts sem perder tempo com CSS básico
 
+## Principais características
+
+- **Mobile-first:** projetado para funcionar em telas pequenas antes de adaptar para telas maiores.
+- **Sistema de grid (12 colunas):** facilita criar layouts responsivos com classes como `col-md-6`.
+- **Componentes prontos:** botões, cards, modais, navbars, formulários e muito mais.
+- **Classes utilitárias:** ajustam margem, padding, cor e tipografia diretamente no HTML.
+- **Temas customizáveis:** variáveis CSS permitem alterar cores e estilos globais com facilidade.
+- **Compatibilidade:** funciona nos principais navegadores modernos sem configuração extra.
+
+## Como instalar
+
+**Opção 1 — CDN (mais simples, sem instalar nada):**
+
+Cole no `<head>` do seu HTML:
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+```
+
+Cole antes do `</body>`:
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+```
+
+**Opção 2 — npm (para projetos com Node.js):**
+
+```bash
+npm install bootstrap
+```
+
+E importe no seu arquivo principal:
+
+```javascript
+import 'bootstrap/dist/css/bootstrap.min.css';
+```
+
 ## Conceitos Fundamentais
 
 ### Instalação
