@@ -5,7 +5,7 @@ import DocPage from './components/DocPage'
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/techdev">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
