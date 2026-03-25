@@ -161,7 +161,7 @@ Exemplos: o software da sua Smart TV, BIOS do computador, impressora, entre outr
 
 ## 5 - Ciclo de Vida da Informação
 
-```
+```Exemplo
 Entrada → Processamento → Saída
 ```
 

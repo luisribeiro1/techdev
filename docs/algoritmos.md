@@ -39,12 +39,14 @@ Algoritmos podem ser escritos em **pseudocódigo** (linguagem informal) ou repre
 **Para praticar com código real:**
 
 - [VisuAlg](https://visualg3.com.br/) — ambiente em português para aprender algoritmos (gratuito)
+- [Portugol Studio](https://portugol.dev) — ambiente online para aprender algoritmos (gratuito)
 - [Scratch](https://scratch.mit.edu/) — plataforma visual, ótima para iniciantes
 - Qualquer editor de texto + navegador para JavaScript
 
 **Para fluxogramas:**
 
 - [draw.io](https://draw.io) — gratuito, roda no navegador, sem instalação
+- [Lucidchart](https://lucidchart.com) — tem versão gratuita, fácil de usar
 
 ## Conceitos Fundamentais
 
@@ -52,7 +54,7 @@ Algoritmos podem ser escritos em **pseudocódigo** (linguagem informal) ou repre
 
 Uma variável é como uma **caixa com etiqueta** onde guardamos informações.
 
-```
+```Exemplo
 nome = "Maria"
 idade = 25
 altura = 1.65
@@ -77,7 +79,7 @@ Cada variável tem:
 
 Todo programa basicamente **recebe dados** (entrada), **processa** e **mostra resultados** (saída).
 
-```
+```Exemplo
 // Entrada: pedir informação ao usuário
 escreva("Qual seu nome?")
 leia(nome)
@@ -126,7 +128,7 @@ Permitem que o programa **tome decisões**.
 
 #### Se / Senão (if / else)
 
-```
+```Exemplo
 idade = 18
 
 se (idade >= 18) entao
@@ -142,7 +144,7 @@ Pense assim: é como uma **bifurcação na estrada**. Dependendo da condição, 
 
 Quando há mais de duas opções:
 
-```
+```Exemplo
 nota = 7.5
 
 se (nota >= 9) entao
@@ -164,7 +166,7 @@ Permitem **repetir** um bloco de código várias vezes.
 
 Repete **enquanto** a condição for verdadeira:
 
-```
+```Exemplo
 contador = 1
 
 enquanto (contador <= 5) faca
@@ -181,7 +183,7 @@ Analogia: é como dar voltas numa pista. Você continua correndo **enquanto** n�
 
 Repete um **número definido** de vezes:
 
-```
+```Exemplo
 para i de 1 ate 10 faca
     escreva(i)
 fimpara
@@ -193,7 +195,7 @@ fimpara
 
 Executa pelo menos uma vez, depois verifica a condição:
 
-```
+```Exemplo
 faca
     escreva("Digite um número positivo: ")
     leia(numero)
@@ -204,7 +206,7 @@ enquanto (numero <= 0)
 
 Um vetor é como uma **estante com prateleiras numeradas**. Cada prateleira guarda um valor.
 
-```
+```Exemplo
 notas[5] = {8.5, 7.0, 9.2, 6.8, 10.0}
 
 // Acessar o primeiro elemento (posição 0):
@@ -218,7 +220,7 @@ A contagem começa do **zero**, não do um. Isso é padrão em quase todas as li
 
 #### Percorrer um vetor
 
-```
+```Exemplo
 frutas[4] = {"Maçã", "Banana", "Laranja", "Uva"}
 
 para i de 0 ate 3 faca
@@ -230,7 +232,7 @@ fimpara
 
 Uma função é um **bloco de código reutilizável** que faz uma tarefa específica.
 
-```
+```Exemplo
 funcao calcularMedia(nota1, nota2)
     media = (nota1 + nota2) / 2
     retorne media
@@ -256,7 +258,7 @@ Antes de escrever qualquer código, responda:
 
 Escreva os passos em português antes de codificar:
 
-```
+```Exemplo
 Problema: Calcular se um aluno foi aprovado
 
 1. Receber as 3 notas do aluno
@@ -269,7 +271,7 @@ Problema: Calcular se um aluno foi aprovado
 
 Transforme o plano em pseudocódigo:
 
-```
+```Exemplo
 escreva("Digite a nota 1: ")
 leia(nota1)
 escreva("Digite a nota 2: ")

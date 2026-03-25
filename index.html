@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>techdev — Documentação técnica para iniciantes</title>
     <script>
+      // Apply saved theme before React loads to prevent flash
+      if (localStorage.getItem('theme') === 'light') {
+        document.documentElement.classList.add('light');
+      }
       // Redirect from 404.html for GitHub Pages SPA routing
       (function () {
         var redirect = sessionStorage.redirect;
@@ -15,8 +19,8 @@
         }
       })();
     </script>
-    <script type="module" crossorigin src="/techdev/assets/index-DAPavTSa.js"></script>
-    <link rel="stylesheet" crossorigin href="/techdev/assets/index-BmzGLCUk.css">
+    <script type="module" crossorigin src="/techdev/assets/index-BK81oNSJ.js"></script>
+    <link rel="stylesheet" crossorigin href="/techdev/assets/index-BJhUqt-3.css">
   </head>
   <body>
     <div id="root"></div>

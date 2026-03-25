@@ -68,7 +68,7 @@ Existem vários estilos arquiteturais. Os principais:
 
 **Estrutura típica:**
 
-```
+```Exemplo
 Apresentação (UI)
        ↓
   Aplicação
@@ -82,7 +82,7 @@ Banco de dados
 
 **Exemplo prático de um sistema web:**
 
-```
+```Exemplo
   React
     ↓
 API Node ou C#
@@ -125,7 +125,7 @@ Regras de negócio
 
 **Estrutura:**
 
-```
+```Exemplo
 Controller
     ↓
   Model
@@ -192,13 +192,13 @@ Geralmente, cada serviço tem banco próprio e deploy independente.
 
 ---
 
-## Arquitetura Hexagonal (Ports and Adapters)
+## Arquitetura Hexagonal 
 
 **Ideia central:** Separar o núcleo do sistema do mundo externo.
 
 **Estrutura:**
 
-```
+```Exemplo
       API
        |
 Adapter — Core — Adapter
@@ -216,26 +216,3 @@ Adapters conectam o sistema ao mundo externo.
 
 Exemplos: banco de dados, API REST, CLI, fila.
 
----
-
-## Arquitetura Orientada a Eventos
-
-Baseada em eventos do sistema.
-
-Exemplos de eventos:
-
-- PedidoCriado
-- PagamentoAprovado
-- ProdutoEnviado
-
-**Arquitetura:**
-
-```
-Producer → Event Bus → Consumer
-```
-
-**Ferramentas comuns:**
-
-- Kafka
-- RabbitMQ
-- AWS SNS
