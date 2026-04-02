@@ -78,7 +78,7 @@ var idade = 25;
 // String (texto)
 const nome = "Carlos";
 const mensagem = 'Olá, mundo!';
-const template = `Bem-vindo, ${nome}!`; // template literal
+const template = `Bem-vindo, ${nome}!`; // template string ou literal
 
 // Number (número)
 const idade = 30;
@@ -129,21 +129,68 @@ true || false   // true (OU)
 
 **Importante:** Sempre use `===` em vez de `==`. O triplo igual compara valor E tipo, evitando bugs sutis.
 
-### Condicionais
+### Condicionais - if (condição única)
+
+```javascript
+// Modifique o valor de idade para testar as condições
+const idade = 18;
+
+if (idade >= 18) {
+    console.log("Maior de idade");
+}
+```
+
+### Condicionais - if...else (condição verdadeira ou falsa)
 
 ```javascript
 const idade = 18;
 
 if (idade >= 18) {
     console.log("Maior de idade");
-} else if (idade >= 16) {
-    console.log("Pode votar, mas não pode dirigir");
 } else {
     console.log("Menor de idade");
 }
 
 // Ternário (if/else curto)
 const status = idade >= 18 ? "Adulto" : "Menor";
+```
+
+### Condicionais - if...elseif (múltiplas condições)
+
+```javascript
+const nota = 85;
+if (nota >= 90) {
+    console.log("Excelente");
+} else if (nota >= 80) {
+    console.log("Muito bom");
+} else if (nota >= 70) {
+    console.log("Bom");
+} else {
+    console.log("Nota abaixo de 70 - Precisa melhorar");
+}
+```
+### Condicionais - switch (múltiplas condições com base em um valor)
+
+```javascript
+let estado = ""
+const uf = "SP"
+switch (uf) {
+  case "MG":
+     estado = "Minas Gerais"
+     break;
+  case "SP":
+     estado = "São Paulo"
+     break;
+  case "RJ":
+     estado = "Rio de Janeiro"
+     break;
+  case "ES":
+     estado = "Espírito Santo"
+     break;
+  default:
+     estado = "Não é um estado da região sudeste"
+}
+console.log(estado)
 ```
 
 ### Loops
@@ -181,6 +228,11 @@ function somar(a, b) {
     return a + b;
 }
 
+// Função anônima atribuída a variável
+const subtrair = function(a, b) {
+    return a - b;
+}
+
 // Arrow function (forma moderna)
 const multiplicar = (a, b) => a * b;
 
@@ -191,9 +243,10 @@ const calcularMedia = (notas) => {
 };
 
 // Usando as funções
-console.log(somar(5, 3));           // 8
-console.log(multiplicar(4, 2));     // 8
-console.log(calcularMedia([8, 7, 9])); // 8
+console.log(somar(5, 3));               // 8
+console.log(subtrair(10, 4));           // 6
+console.log(multiplicar(4, 2));         // 8
+console.log(calcularMedia([8, 7, 9]));  // 8
 ```
 
 ### Arrays (Listas)
@@ -217,9 +270,11 @@ numeros.includes(4);     // true (existe no array?)
 const dobro = numeros.map(n => n * 2);
 // [2, 4, 6, 8, 10]
 
+// Filtrar
 const pares = numeros.filter(n => n % 2 === 0);
 // [2, 4]
 
+// Reduzir (ex: somar todos)
 const soma = numeros.reduce((acc, n) => acc + n, 0);
 // 15
 
