@@ -308,6 +308,199 @@ console.log(nome); // "Pedro"
 const alunoAtualizado = { ...aluno, idade: 21 };
 ```
 
+### Manipulação de Strings
+
+Strings possuem métodos embutidos para processar e formatar texto:
+
+```javascript
+const frase = "  Olá, Mundo JavaScript!  ";
+
+// Remover espaços nas bordas
+frase.trim()                // "Olá, Mundo JavaScript!"
+
+// Maiúsculas / minúsculas
+frase.trim().toUpperCase()  // "OLÁ, MUNDO JAVASCRIPT!"
+frase.trim().toLowerCase()  // "olá, mundo javascript!"
+
+// Verificar conteúdo
+frase.includes("Mundo")     // true
+frase.startsWith("  Olá")   // true
+frase.endsWith("!  ")       // true
+
+// Buscar e substituir
+frase.replace("Mundo", "Turma")
+// "  Olá, Turma JavaScript!  "
+frase.replaceAll("a", "@")
+// "  Olá, Mundo J@v@Script!  "
+
+// Extrair partes
+const texto = "JavaScript";
+texto.slice(0, 4)     // "Java" (índice 0 ao 3)
+texto.slice(4)        // "Script" (índice 4 até o fim)
+texto.charAt(0)       // "J"
+
+// Dividir em array
+"a,b,c".split(",")    // ["a", "b", "c"]
+"Olá mundo".split(" ") // ["Olá", "mundo"]
+
+// Tamanho e posição
+"Hello".length        // 5
+"JavaScript".indexOf("Script")  // 4
+"JavaScript".indexOf("Python")  // -1 (não encontrou)
+
+// Repetir
+"Na".repeat(3)        // "NaNaNa"
+```
+
+### Desestruturação de Arrays
+
+Permite extrair valores de arrays diretamente em variáveis, sem usar índices:
+
+```javascript
+const cores = ["vermelho", "verde", "azul"];
+
+// Sem desestruturação (forma antiga)
+const primeira = cores[0]; // "vermelho"
+
+// Com desestruturação
+const [primeiraCor, segundaCor, terceiraCor] = cores;
+console.log(primeiraCor); // "vermelho"
+console.log(segundaCor);  // "verde"
+
+// Pular elementos com vírgula
+const [, , ultima] = cores;
+console.log(ultima); // "azul"
+
+// Valor padrão (se o elemento não existir)
+const [a, b, c, d = "roxo"] = cores;
+console.log(d); // "roxo"
+
+// Troca de variáveis sem variável temporária
+let x = 1, y = 2;
+[x, y] = [y, x];
+console.log(x, y); // 2 1
+
+// Capturar o restante com rest (...)
+const [primeiro, ...restante] = [10, 20, 30, 40];
+console.log(primeiro);  // 10
+console.log(restante);  // [20, 30, 40]
+```
+
+### Desestruturação de Objetos
+
+O mesmo conceito aplicado a objetos — extrai propriedades diretamente em variáveis:
+
+```javascript
+const aluno = {
+    nome: "Lucas",
+    idade: 19,
+    curso: "Sistemas de Informação",
+    cidade: "Belo Horizonte"
+};
+
+// Desestruturação básica
+const { nome, idade } = aluno;
+console.log(nome);  // "Lucas"
+console.log(idade); // 19
+
+// Renomear ao desestruturar
+const { nome: nomeDoAluno, curso: nomeDoCurso } = aluno;
+console.log(nomeDoAluno); // "Lucas"
+console.log(nomeDoCurso); // "Sistemas de Informação"
+
+// Valor padrão para propriedade inexistente
+const { cidade, pais = "Brasil" } = aluno;
+console.log(pais); // "Brasil"
+
+// Desestruturação aninhada
+const empresa = {
+    nome: "TechCorp",
+    endereco: {
+        rua: "Av. Paulista",
+        numero: 1000
+    }
+};
+const { endereco: { rua, numero } } = empresa;
+console.log(rua);    // "Av. Paulista"
+console.log(numero); // 1000
+
+// Muito usado em parâmetros de função
+function exibirAluno({ nome, curso }) {
+    console.log(`${nome} — ${curso}`);
+}
+exibirAluno(aluno); // "Lucas — Sistemas de Informação"
+```
+
+### Spread (...) — Espalhando Elementos
+
+O operador spread "espalha" os itens de um array ou as propriedades de um objeto:
+
+```javascript
+// ─── Spread em Arrays ────────────────────────────
+const frutas  = ["maçã", "banana"];
+const verduras = ["cenoura", "brócolis"];
+
+// Juntar arrays
+const alimentos = [...frutas, ...verduras];
+// ["maçã", "banana", "cenoura", "brócolis"]
+
+// Copiar array sem referenciar o original
+const copia = [...frutas];
+copia.push("laranja");
+console.log(frutas); // ["maçã", "banana"] — original intacto
+
+// Passar array como argumentos
+const numeros = [5, 2, 8, 1, 9];
+Math.max(...numeros); // 9
+
+
+// ─── Spread em Objetos ───────────────────────────
+const usuario  = { nome: "Ana", idade: 25 };
+const endereco = { cidade: "SP", pais: "Brasil" };
+
+// Juntar objetos
+const perfil = { ...usuario, ...endereco };
+// { nome: "Ana", idade: 25, cidade: "SP", pais: "Brasil" }
+
+// Copiar e sobrescrever propriedades
+const usuarioAtualizado = { ...usuario, idade: 26, ativo: true };
+// { nome: "Ana", idade: 26, ativo: true }
+```
+
+### Rest (...) — Agrupando Argumentos
+
+Mesma sintaxe do spread (`...`), mas faz o oposto: **agrupa** múltiplos valores em um array.
+
+```javascript
+// ─── Rest em Funções ─────────────────────────────
+// Aceitar qualquer quantidade de argumentos
+function somar(...numeros) {
+    return numeros.reduce((total, n) => total + n, 0);
+}
+somar(1, 2, 3);         // 6
+somar(10, 20, 30, 40);  // 100
+
+// Primeiro argumento fixo, restante agrupado
+function exibirNota(disciplina, ...notas) {
+    const media = notas.reduce((s, n) => s + n, 0) / notas.length;
+    console.log(`${disciplina}: média ${media.toFixed(1)}`);
+}
+exibirNota("Matemática", 8, 7, 9, 6);
+// "Matemática: média 7.5"
+
+
+// ─── Rest em Desestruturação ──────────────────────
+const [cabeca, ...cauda] = [1, 2, 3, 4, 5];
+console.log(cabeca); // 1
+console.log(cauda);  // [2, 3, 4, 5]
+
+const { nome, ...outrosDados } = { nome: "Carlos", idade: 30, cidade: "RJ" };
+console.log(nome);        // "Carlos"
+console.log(outrosDados); // { idade: 30, cidade: "RJ" }
+```
+
+> **Resumo:** Spread "abre" uma coleção para fora. Rest "recolhe" valores para dentro de um array. Mesma sintaxe (`...`), sentidos opostos.
+
 ### Manipulação do DOM
 
 O DOM (Document Object Model) é como o JavaScript interage com o HTML:
@@ -344,24 +537,160 @@ novoParagrafo.textContent = "Parágrafo criado com JavaScript";
 document.body.appendChild(novoParagrafo);
 ```
 
-### Promises e Async/Await
+### Tratamento de Erros (try/catch)
 
-Para operações que demoram (como buscar dados da internet):
+Use `try/catch` para lidar com situações que podem falhar sem quebrar o programa:
 
 ```javascript
-// Fetch API com async/await
-async function buscarUsuario(id) {
+// Estrutura básica
+try {
+    // código que pode lançar um erro
+    const dados = JSON.parse("isso não é JSON"); // lança SyntaxError
+    console.log(dados);
+} catch (erro) {
+    // executado apenas se houver exceção
+    console.error("Erro capturado:", erro.message);
+} finally {
+    // executado SEMPRE, com ou sem erro
+    console.log("Operação concluída.");
+}
+
+
+// Lançar erros personalizados com throw
+function dividir(a, b) {
+    if (b === 0) {
+        throw new Error("Divisão por zero não é permitida!");
+    }
+    return a / b;
+}
+
+try {
+    console.log(dividir(10, 2)); // 5
+    console.log(dividir(8, 0));  // lança Error
+} catch (erro) {
+    console.error(erro.message); // "Divisão por zero não é permitida!"
+}
+
+
+// Exemplo prático — parsear JSON com segurança
+function parsearJSON(texto) {
     try {
-        const resposta = await fetch(`https://api.exemplo.com/users/${id}`);
-        const dados = await resposta.json();
-        console.log(dados);
+        return JSON.parse(texto);
     } catch (erro) {
-        console.error("Erro ao buscar usuário:", erro);
+        console.error("JSON inválido:", erro.message);
+        return null;
     }
 }
 
-buscarUsuario(1);
+parsearJSON('{"nome": "Ana"}');  // { nome: "Ana" }
+parsearJSON("texto inválido");   // null (sem quebrar o programa)
 ```
+
+> **Boa prática:** Use `try/catch` para operações que dependem de fatores externos — parseamento de JSON, chamadas de API, acesso a arquivos — onde falhas são esperadas e tratáveis.
+
+### Funções Assíncronas (async/await)
+
+JavaScript é **assíncrono por natureza**: certas operações (buscar dados, ler arquivos) demoram. Em vez de travar tudo enquanto espera, o JS continua executando e retoma quando o resultado chegar.
+
+```javascript
+// Promise — representa um valor futuro
+const promessa = new Promise((resolve, reject) => {
+    const sucesso = true;
+    if (sucesso) {
+        resolve("Dados carregados!");
+    } else {
+        reject(new Error("Falha ao carregar."));
+    }
+});
+
+promessa
+    .then(resultado => console.log(resultado)) // "Dados carregados!"
+    .catch(erro => console.error(erro.message));
+
+
+// async/await — forma mais legível de trabalhar com Promises
+// Uma função async sempre retorna uma Promise
+async function buscarUsuario(id) {
+    try {
+        const resposta = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
+
+        if (!resposta.ok) {
+            throw new Error(`Erro HTTP: ${resposta.status}`);
+        }
+
+        const dados = await resposta.json();
+        console.log(dados.name);
+    } catch (erro) {
+        console.error("Erro ao buscar usuário:", erro.message);
+    }
+}
+
+buscarUsuario(1); // chama sem bloquear o restante do código
+
+
+// Executar múltiplas Promises em paralelo
+async function buscarTudo() {
+    const [usuarios, posts] = await Promise.all([
+        fetch("https://jsonplaceholder.typicode.com/users").then(r => r.json()),
+        fetch("https://jsonplaceholder.typicode.com/posts").then(r => r.json()),
+    ]);
+
+    console.log(`Usuários: ${usuarios.length}`);
+    console.log(`Posts: ${posts.length}`);
+}
+```
+
+> **await só funciona dentro de funções marcadas com `async`.** Fora delas, use `.then()` / `.catch()`.
+
+### setTimeout e setInterval
+
+Funções para executar código após um atraso ou de forma repetida:
+
+```javascript
+// ─── setTimeout — executa UMA vez após o atraso ──
+console.log("Início");
+
+setTimeout(() => {
+    console.log("Executado após 2 segundos!");
+}, 2000); // tempo em milissegundos
+
+console.log("Isso aparece ANTES do timeout");
+// Saída: "Início" → "Isso aparece ANTES..." → (2s depois) "Executado..."
+
+// Cancelar antes de executar
+const meuTimeout = setTimeout(() => console.log("Nunca vai aparecer"), 5000);
+clearTimeout(meuTimeout); // cancela o timeout
+
+
+// ─── setInterval — executa REPETIDAMENTE ─────────
+let contador = 0;
+
+const intervalo = setInterval(() => {
+    contador++;
+    console.log(`Tick: ${contador}`);
+
+    if (contador === 5) {
+        clearInterval(intervalo); // para o intervalo após 5 execuções
+        console.log("Intervalo encerrado.");
+    }
+}, 1000); // executa a cada 1 segundo
+
+
+// Exemplo prático — relógio no console
+const relogio = setInterval(() => {
+    const agora = new Date();
+    const hora  = agora.toLocaleTimeString("pt-BR");
+    console.log(hora); // ex: "14:32:07"
+}, 1000);
+
+// Para o relógio após 10 segundos
+setTimeout(() => clearInterval(relogio), 10000);
+```
+
+| Função | Executa | Como parar |
+|---|---|---|
+| `setTimeout(fn, ms)` | Uma vez após `ms` ms | `clearTimeout(id)` |
+| `setInterval(fn, ms)` | A cada `ms` ms | `clearInterval(id)` |
 
 ### Armazenamento Local
 
